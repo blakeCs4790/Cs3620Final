@@ -1,0 +1,11 @@
+<?php
+
+namespace Storage;
+
+interface StorageInterface {
+    public function Create($values);
+    public function Read();
+    public function ReadId($id);
+    public function Remove($id);
+    public function Update($id, $values);
+}

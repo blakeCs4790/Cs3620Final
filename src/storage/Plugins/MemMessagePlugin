@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Blake Freeman
+ * Date: 8/4/2017
+ * Time: 12:30 PM
+ */
+
+namespace Storage;
+
+
+class PluginMemMessage implements StorageInterface
+{
+    protected $buf;
+
+    public function __construct()
+    {
+        $this->buf = [];
+    }
+
+    public function Count()
+    {
+        return sizeof($this->buf);
+    }
+
+    public function Create($message)
+    {
+        if(!is_object($message)){
+            return false;
+        }
+        $this->buf = $message;
+        return Count();
+    }
+
+    public function Read()
+    {
+        return $this->buf;
+    }
+
+    public function ReadId($id)
+    {
+        foreach ($this->buf as $message) {
+            if ($message->Roomid() == $id) {
+                return $message;
+            }
+        }
+    }
+
+    public function Remove($id)
+    {
+        unset($this->buf[$id]);
+    }
+
+    public function Update($id, $values)
+    {
+        //toDo implement Update
+    }
+}

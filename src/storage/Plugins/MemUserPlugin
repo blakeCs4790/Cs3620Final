@@ -1,0 +1,54 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Blake Freeman
+ * Date: 8/4/2017
+ * Time: 12:28 PM
+ */
+
+namespace Storage;
+
+
+class PluginMemUser implements StorageInterface
+{
+    protected $buf;
+
+    public function  __construct()
+    {
+        $this->buf = [];
+    }
+
+    public function Create($user)
+    {
+        if(is_object($user))
+        {
+            return sizeof($this->buf);
+        }
+    }
+
+    public function Read()
+    {
+        return $this->buf;
+    }
+
+    public function ReadId($id)
+    {
+        if(is-int($id))
+        {
+            return $this->buf[$id];
+        }
+    }
+
+    public function Remove($id)
+    {
+        if(is_int($id))
+        {
+            unset($this->buf[$id]);
+        }
+    }
+
+    public function Update($id, $values)
+    {
+        return "Update is not implemented";
+    }
+}

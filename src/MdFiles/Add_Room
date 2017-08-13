@@ -1,0 +1,40 @@
+## Add Room
+Update the profile for a specific user account.
+
+`POST/Room/{userId}
+
+### Headers
+require content json
+
+### Parameters
+ 
+
+### Body
+
+
+### Response
+- **201** - created
+
+### Errors
+- **403** - missing or invalid userId
+- **500** - Server exploded
+
+### Example Request
+`POST/Room/someEmail
+
+```javascript
+{
+   roomId: "10"
+}
+```
+
+### Example Response
+`201 Created`
+
+
+
+```javascript
+{
+	roomId: "10"
+}
+```

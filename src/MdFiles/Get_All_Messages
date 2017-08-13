@@ -1,0 +1,39 @@
+## Read All Messages by Room Id
+ Get all messages by room Id
+
+`Get /message/{room id}
+
+### Headers
+- **Content-Type** -application Json 
+
+### Parameters
+- **MessageId** - Message to return
+
+### Body
+
+### Response
+- **200** - ok
+
+### Errors
+- **400** - Caused by missing identifier
+- **404** - mesageId does not exist
+- **500** - Server exploded
+
+### Example Request
+`   GET /Message/{room id}
+
+```javascript
+{
+	RoomId: "123"
+	
+}
+```
+
+### Example Response
+`201 CREATED`
+
+```javascript
+{
+	messageId: 1692
+	message: "Some text"
+}

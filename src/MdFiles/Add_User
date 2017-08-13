@@ -1,0 +1,46 @@
+## Add User
+Update the profile for a specific user account.
+
+`POST/User/profile`
+
+### Headers
+- **AuthSessionId** - N/A
+- **AuthSessionSecret** - N/A
+
+### Parameters
+- **userId** - N/A
+- **userName** - login name
+- 
+
+### Body
+- **username** - Username to add
+- **email** - E-mail address add
+
+### Response
+- **201** - created
+
+### Errors
+- **400** - Caused by missing userName or missing email
+- **400** - Caused by adding duplicate email
+- **500** - Server exploded
+
+### Example Request
+`POST/AddUser/?username=Bob&UserEmail=Bob_email
+
+```javascript
+{
+    username: "Bob"
+    userEmail: "Bob@email.com"
+}
+```
+
+### Example Response
+`201 Created`
+
+
+
+```javascript
+{
+	userId: 1692
+}
+```

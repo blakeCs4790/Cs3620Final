@@ -1,0 +1,42 @@
+## Read Rooms
+Update the profile for a specific user account.
+
+`GET/Rooms/
+
+### Headers
+require content json
+
+### Parameters
+ 
+
+### Body
+
+
+### Response
+- **200** - ok
+
+### Errors
+- **404** - 
+- **500** - Server exploded
+
+### Example Request
+`GET/Room/
+
+```javascript
+{
+   
+}
+```
+
+### Example Response
+`200 ok
+
+
+
+```javascript
+{
+	roomId: "10"
+	roomId: "11"
+	roomId: "12"
+}
+```

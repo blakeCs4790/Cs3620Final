@@ -1,0 +1,41 @@
+## Add Message
+Add a message for specific user and session
+
+`POST /message/{userId}/{roomId}/Message_to_add
+
+### Headers
+- **Content-Type** -application Json 
+
+### Parameters
+- **Message** - userId, roomId, message to add
+
+### Body
+- **Message** - message to add
+
+### Response
+- **201** - Created
+
+### Errors
+- **400** - Caused by missing identifier
+- **403** - Caused by missing Session Id
+- **500** - Server exploded
+
+### Example Request
+`   PUT /Message/{userId}/{messageId}/message`
+
+```javascript
+{
+	userId: "123"
+	roomId: "456"
+	message:  "some message"
+}
+```
+
+### Example Response
+`201 CREATED`
+
+```javascript
+{
+	messageId: 1692
+	RoomId: 1111
+}
