@@ -8,6 +8,7 @@ class Message
     protected $message;
     protected $createdDTM;
     protected $userId;
+    protected $roomId;
 
 
     function MessageId($messageId)
@@ -52,6 +53,16 @@ class Message
     function GetCreatedDTM()
     {
         return $this->createdDTM;
+    }
+
+    function RoomId($roomId)
+    {
+        return $this->RoomId = $roomId;
+    }
+
+    function GetRoomId()
+    {
+        return $this->roomId;
     }
 
 }

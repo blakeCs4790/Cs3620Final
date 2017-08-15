@@ -12,7 +12,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' => 'mysql',
-            'database' => 'Cs3620',
+            'database' => 'cs3620',
             'port' => 3306,
             'username' => 'root',
             'password' => ''

@@ -34,34 +34,33 @@
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="14" parent="8" name="PRIMARY">
+    <column id="14" parent="8" name="RoomId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="15" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MessageId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="15" parent="9" name="RoomId">
+    <column id="16" parent="9" name="RoomId">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="16" parent="9" name="UserId">
+    <column id="17" parent="9" name="UserId">
       <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
+      <DataType>varchar(150)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="17" parent="9" name="MessageId">
+    <column id="18" parent="9" name="DateCreated">
       <Position>3</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="18" parent="9" name="LastUser">
-      <Position>4</Position>
-      <DataType>text|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="19" parent="9" name="Active">
-      <Position>5</Position>
+      <Position>4</Position>
       <DataType>bit(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>

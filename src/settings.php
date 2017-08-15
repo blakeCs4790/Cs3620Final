@@ -7,6 +7,6 @@
  */
 $settings = [
     'settings' =>[
-        'database' =>[include__DIR__.'/config/database.php']
+        'database' =>[include __DIR__.'/config/database.php']
     ]
 ];

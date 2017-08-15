@@ -34,7 +34,6 @@ class Room
         return $this->roomId;
     }
 
-
     function UserId($userId)
     {
         $this->userId = $userId;

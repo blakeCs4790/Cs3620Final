@@ -17,7 +17,6 @@ Add a message for specific user and session
 
 ### Errors
 - **400** - Caused by missing identifier
-- **403** - Caused by missing Session Id
 - **500** - Server exploded
 
 ### Example Request
