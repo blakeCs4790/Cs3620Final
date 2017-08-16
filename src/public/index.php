@@ -12,19 +12,16 @@ error_reporting(E_ALL);
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use \storage\dbAdapters as Storage;
+use \domain\User;
+use \domain\Room;
+use \domain\Message;
 
 require __DIR__ . '/../../vendor/autoload.php';
-
-$app = new \Slim\App;
+require __DIR__ . '/../settings.php';
+$app = new \Slim\App($settings);
 require __DIR__ . '/../settings.php';
 require __DIR__ . '/../dependencies.php';
 require __DIR__ . '/../routes.php';
-
-//$app->get('/hello/{name}', function (Request $req, Response $resp) {
-//    $name = $req->getAttribute('name');
-//    $resp->getBody()->write('Hello, ' . $name);
-//
-//    return $resp;
-//});
 
 $app->run();
